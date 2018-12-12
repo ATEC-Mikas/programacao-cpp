@@ -5,19 +5,24 @@ using namespace std;
 
 int main()
 {
-	int num,n=0,soma=0;
+	int x,y,num,c=0,i;
 	
-	cout << "Insira um numero: ";
-	cin >> num;
+	cout << "Quantos alunos:";
+	cin >> x;
 	
-	while(num!=0) {
-		n++;
-		soma+=num;
-		cout << "\nInsira outro numero: ";
+	cout << "Que idade a ser superior:";
+	cin >> y;
+	
+	for(i=0;i<x;i++) {
+		cout << "\nIdade:";
 		cin >> num;
+		if(num>y) {
+			c++;
+		}
 	}
 	
-	cout << "Soma: " << soma << "\nMedia: " << (float)soma/n;
+	cout << "\nAlunos com idade superior a " << y << ": " << c;
+	
 
     return 0;
 }
