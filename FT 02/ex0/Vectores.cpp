@@ -66,6 +66,9 @@ int Vectores::segundoMaiorValor(int n,int* vec) {
 			}
 		}
 	}
+	if(!flag) {
+		segundomaior=0;
+	}
 	return segundomaior;
 }
 
