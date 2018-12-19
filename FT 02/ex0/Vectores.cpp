@@ -58,9 +58,11 @@ int Vectores::segundoMaiorValor(int n,int* vec) {
 				if(vec[i]>vec[segundomaior]) {
 					segundomaior=i;
 				}
-			} else {				
-				segundomaior=i;
-				flag=true;
+			} else {
+				if(vec[i]!=vec[maior]) {
+					segundomaior=i;
+					flag=true;
+				}	
 			}
 		}
 	}

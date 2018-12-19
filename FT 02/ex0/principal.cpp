@@ -8,6 +8,9 @@ int main() {
 	double m = Vectores::mediaVector(n,vec);
 	cout << "Media vetor: " << m << "\n";
 	Vectores::mostrarVector(n,vec);
+	cout << "\n----------------------------------------";
+	cout << "\nSegundo maior: " << vec[Vectores::segundoMaiorValor(n,vec)];
+	
 	
 	cout << "\n----------------------------------------";
 	int x;
