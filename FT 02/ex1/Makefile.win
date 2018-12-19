@@ -1,15 +1,15 @@
-# Project: Ex1
+# Project: ex2
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = ex1.o Vectores.o
-LINKOBJ  = ex1.o Vectores.o
+OBJ      = ../ex2/main.o ../ex2/Matrizes.o
+LINKOBJ  = ../ex2/main.o ../ex2/Matrizes.o
 LIBS     = -L"D:/t0114411 Miguel Pereira/Dev-Cpp/MinGW64/lib" -L"D:/t0114411 Miguel Pereira/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"D:/t0114411 Miguel Pereira/Dev-Cpp/MinGW64/include" -I"D:/t0114411 Miguel Pereira/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/t0114411 Miguel Pereira/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"D:/t0114411 Miguel Pereira/Dev-Cpp/MinGW64/include" -I"D:/t0114411 Miguel Pereira/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/t0114411 Miguel Pereira/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/t0114411 Miguel Pereira/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = Ex1.exe
+BIN      = ex2.exe
 CXXFLAGS = $(CXXINCS) -std=c++11
 CFLAGS   = $(INCS) -std=c++11
 RM       = rm.exe -f
@@ -24,8 +24,8 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-ex1.o: ex1.cpp
-	$(CPP) -c ex1.cpp -o ex1.o $(CXXFLAGS)
+../ex2/main.o: ../ex2/main.cpp
+	$(CPP) -c ../ex2/main.cpp -o ../ex2/main.o $(CXXFLAGS)
 
-Vectores.o: Vectores.cpp
-	$(CPP) -c Vectores.cpp -o Vectores.o $(CXXFLAGS)
+../ex2/Matrizes.o: ../ex2/Matrizes.cpp
+	$(CPP) -c ../ex2/Matrizes.cpp -o ../ex2/Matrizes.o $(CXXFLAGS)
