@@ -10,6 +10,17 @@ class Matrizes {
 		static void lerMatriz(int l,int c, int ** mat);
 		static void mostrarMatriz(int l,int c, int ** mat);
 		static bool matrizQuadrada(int l, int c);
-		static int  maiorLinha(int linha,int c, int **mat);
-		static int  maiorColuna(int l,int coluna, int **mat);
+		static int  maiorLinha(int linha,int c, int ** mat);
+		static int  maiorColuna(int l,int coluna, int ** mat);
+		
+		//CODEJAM PELOS VISTOS
+		
+		static int** somaMatriz(int l,int c, int ** matA, int ** matB);
+		static int * diagonalPrincipal(int l,int c, int ** mat);
+		static int * centro(int l,int c,int ** mat);
+		static int ** transposta(int l,int c, int ** mat);
+		static bool isNula(int l,int c, int ** mat);
+		static bool isIdentidade(int l,int c, int ** mat);
+		static bool isEscalar(int l,int c, int ** mat);
+		static int ** criarMatNula(int l,int c);
 };
