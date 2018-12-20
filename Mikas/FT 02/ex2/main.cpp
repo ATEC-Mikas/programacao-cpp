@@ -42,12 +42,16 @@ int main() {
 	cin >> x;
 	cout << "Maior numero da linha " << x << " : " << Matrizes::maiorLinha(x-1,c,mat);
 	spacer();
-	int ** mat2 =new int *[l];
-	Matrizes::lerMatriz(l,c,mat2);
-	cout << "\n\n";
-	Matrizes::mostrarMatriz(l,c,Matrizes::somaMatriz(l,c,mat,mat2));
+	if(Matrizes::matrizQuadrada(l,c)) {
+		int ** mat2 =new int *[l];
+		Matrizes::lerMatriz(l,c,mat2);
+		cout << "\n\n";
+		Matrizes::mostrarMatriz(l,c,Matrizes::somaMatriz(l,c,mat,mat2));
+	}
 	spacer();
-	mostrarVetorContador(Matrizes::diagonalPrincipal(l,c,mat));
+	if(Matrizes::matrizQuadrada(l,c)) {
+		mostrarVetorContador(Matrizes::diagonalPrincipal(l,c,mat));
+	}
 	spacer();
 	mostrarVetorContador(Matrizes::centro(l,c,mat));
 	spacer();
