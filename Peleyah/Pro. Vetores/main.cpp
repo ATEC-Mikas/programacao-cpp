@@ -13,25 +13,25 @@ int main(){
 		    
 		    do {
 		        system("CLS");
-		        printf("\n | MENU | Exe 1 - FT4 | MENU");
-		        printf("\n1-Ler N");
-		        printf("\n2-Ler o vetor");
-		        printf("\n3-Escrever o vector lido");
-		        printf("\n4-Escrever o vector lido inversamente ");
-		        printf("\n5-Devolver a posição do maior elemento do vetor");
-		        printf("\n6-Devolver a posição do menor elemento do vetor.");
-		        printf("\n7-Devolver quantos valores do vetor que são maiores que os seus dois vizinhos. Excluem-se as extremidades..");
-		        printf("\n8-Devolver qual a maior diferença entre 2 elementos consecutivos");
-		        printf("\n9-Média ímpares");
-		        printf("\na-Número de elementos múltiplos de 3");
-		        printf("\nb-Elementos comuns dois vetores");
-		        printf("\nc-Vetor ordenado");
-		        printf("\nd-Apagar posição");
-		        printf("\ne-Apagar elemento");
-		        printf("\nf-Posições homologas");
-		        printf("\ng-Segundo maior");
-				printf("\n0-Sair");
-		        printf("\n\nEscolha a opcao:");
+		        cout << ("\n | MENU | Exe 1 - FT4 | MENU");
+		        cout << ("\n1-Ler N");
+		        cout << ("\n2-Ler o vetor");
+		        cout << ("\n3-Escrever o vector lido");
+		        cout << ("\n4-Escrever o vector lido inversamente ");
+		        cout << ("\n5-Devolver a posição do maior elemento do vetor");
+		        cout << ("\n6-Devolver a posição do menor elemento do vetor.");
+		        cout << ("\n7-Devolver quantos valores do vetor que são maiores que os seus dois vizinhos. Excluem-se as extremidades..");
+		        cout << ("\n8-Devolver qual a maior diferença entre 2 elementos consecutivos");
+		        cout << ("\n9-Média ímpares");
+		        cout << ("\na-Número de elementos múltiplos de 3");
+		        cout << ("\nb-Elementos comuns dois vetores");
+		        cout << ("\nc-Vetor ordenado");
+		       	cout << ("\nd-Apagar posição");
+		        cout << ("\ne-Apagar elemento");
+		        cout << ("\nf-Posições homologas");
+		        cout << ("\ng-Segundo maior");
+				cout << ("\n0-Sair");
+		        cout << ("\n\nEscolha a opcao:");
 		        opc=getchar();
 		        switch(opc){
 			        case '1':{n=Vectores::lerN();
