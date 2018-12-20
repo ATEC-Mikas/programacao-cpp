@@ -51,7 +51,7 @@ int Matrizes::maiorElementoLinha(int l, int c, int ** mat){
 	cin >> line;
 
 	int max = mat[line][0];
-    for (int i = 1; i < l; i++)
+    for (int i = 0; i < l; i++)
     {
     	if (mat[line][i] > max)
             {
@@ -63,6 +63,63 @@ int Matrizes::maiorElementoLinha(int l, int c, int ** mat){
     
     
 }
+
+
+int ** Matrizes::soma(int la, int lb, int ca, int cb, int** matA, int** matB){
+	
+	
+	int ** matC = new int * [la];
+	
+	for(int i=0; i<100; i++){
+			
+			matC[i] = new int [ca];
+
+	}
+	
+	if(la==lb && ca==cb){
+		
+		for(int i=0; i<la; i++){
+			for(int j=0; j<ca; j++){
+				matC[i][j] = matA[i][j] + matB[i][j];
+			}
+		}
+		for(int i=0; i<la; i++){
+			for(int j=0; j<ca; j++){
+				cout << "Matriz["<< i+1 << "]["<< j+1 << "]: " << (matC[i][j]) << "\n";
+			}
+		}
+	}
+
+	
+	
+	system("PAUSE");
+	
+	return matC;
+	
+}
+
+
+int* Matrizes::centro(int l, int c, int** mat){
+	
+	if(l % 2 == 0){ //Linha par
+		if(c % 2 == 0){ //Coluna par
+			cout << (mat[l/2-1][c/2-1], mat[c/2][c/2-1], mat[l/2-1][c/2], mat[l/2][c/2]) << "\n";
+		}
+		else{ //Coluna impar
+			cout << (mat[l/2-1][c/2], mat [l/2][c/2]) << "\n";
+		}
+	}
+	else{ //Linha impar
+		if(c % 2 == 0){ //Coluna par
+			cout << (mat[l/2][c/l-1], mat[l/2][c/l]) << "\n";
+		}
+		else{ //Coluna impar
+			cout << (mat[l/2][c/2]) << "\n";
+		}
+	}
+	system("PAUSE");
+}
+
 
 int Matrizes::maiorElementoColuna(int l, int c, int ** mat){
 	
