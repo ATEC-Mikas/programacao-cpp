@@ -122,39 +122,37 @@ bool Matrizes::isNula(int l,int c, int ** mat) {
 }
 
 bool Matrizes::isIdentidade(int l,int c, int ** mat) {
-	bool flag=true;
 	if(l==c) {
 		for(int i=0;i<l;i++) {
 			for(int j=0;j<c;j++) {
 				if(i==j && mat[i][j]!=1) {
-					flag=false;
+					return false;
 				} else {
 					if(i!=j && mat[i][j]!=0) {
-						flag=false;
+						return false;
 					}
 				}
 			}
 		}
 	}
-	return flag;
+	return true;
 }
 
 bool Matrizes::isEscalar(int l,int c, int ** mat) {
-	bool flag=true;
 	if(l==c) {
 		for(int i=0;i<l;i++) {
 			for(int j=0;j<c;j++) {
 				if(i==j && mat[i][j]!=2) {
-					flag=false;
+					return false;
 				} else {
 					if(i!=j && mat[i][j]!=0) {
-						flag=false;
+						return false;
 					}
 				}
 			}
 		}
 	}
-	return flag;
+	return true;
 }
 
 int ** Matrizes::criarMatNula(int l,int c) {
