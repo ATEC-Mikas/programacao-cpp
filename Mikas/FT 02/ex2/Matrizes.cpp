@@ -177,20 +177,20 @@ int ** Matrizes::criarMatNula(int l,int c) {
 }
 
 bool Matrizes::vecIsDiagonal(int L,int C,int ** mat, int * vec) {
-	int denominador=-1,contador=0;
+	int risca=-1,contador=0;
 	int * vetorDiagonal=new int[L];
 	vetorDiagonal=Matrizes::diagonalPrincipalSC(L,C,mat);
 	for(int i=0;i<L;i++) {
-		if(vec[i]==denominador || vetorDiagonal[i]==denominador){
+		if(vec[i]==risca || vetorDiagonal[i]==risca){
 			i=-1;
-			denominador--;
+			risca--;
 		}
 	}
 	for(int i=0;i<L;i++){
 		for(int j=0;j<L;j++) {
 			if(vec[j]==mat[i][i]) {
 				contador++;
-				vec[j]=denominador;
+				vec[j]=risca;
 				break;
 			}
 		}
