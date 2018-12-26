@@ -178,8 +178,10 @@ int ** Matrizes::criarMatNula(int l,int c) {
 
 bool Matrizes::vecIsDiagonal(int L,int C,int ** mat, int * vec) {
 	int denominador=-1,contador=0;
+	int * vetorDiagonal=new int[L];
+	vetorDiagonal=Matrizes::diagonalPrincipalSC(L,C,mat);
 	for(int i=0;i<L;i++) {
-		if(vec[i]==denominador){
+		if(vec[i]==denominador || vetorDiagonal[i]==denominador){
 			i=-1;
 			denominador--;
 		}
