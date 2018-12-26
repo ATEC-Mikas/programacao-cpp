@@ -10,6 +10,16 @@ void mostrarVetorContador(int * vec) {
 	}
 }
 
+int * randomVetor(int n,int * vec) {
+	int aux;
+	for(int i=0;i<n;i=i+2) {
+		aux=vec[i];
+		vec[i]=vec[i+1];
+		vec[i+1]=aux;
+	}
+	return vec;
+}
+
 int main() {
 	
 	int l,c;
@@ -48,6 +58,12 @@ int main() {
 		} else {
 			cout << "Nao #2\n";
 		}
+		cout << "\n";
+		if(Matrizes::vecIsDiagonal(l,c,mat,randomVetor(l,Matrizes::diagonalPrincipalSC(l,c,mat)))){
+			cout << "Sim #3\n";
+		} else {
+			cout << "Nao #3\n";
+		}	
 	}
 	spacer();
 	int x;
