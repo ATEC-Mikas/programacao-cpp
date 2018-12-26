@@ -33,6 +33,23 @@ int main() {
 		cout << "Matriz nao quadrada";
 	}
 	spacer();
+	if(Matrizes::matrizQuadrada(l,c)){
+		if(Matrizes::vecIsDiagonal(l,c,mat,Matrizes::diagonalPrincipalSC(l,c,mat))){
+			cout << "Sim #1\n";
+		} else {
+			cout << "Nao #1\n";			
+		}
+		int * vecDiagonal=new int[l];
+		vecDiagonal=Matrizes::diagonalPrincipalSC(l,c,mat);
+		vecDiagonal[0]=999;
+		cout << "\n";
+		if(Matrizes::vecIsDiagonal(l,c,mat,vecDiagonal)){
+			cout << "Sim #2\n";
+		} else {
+			cout << "Nao #2\n";
+		}
+	}
+	spacer();
 	int x;
 	cout << "Coluna a procurar: ";
 	cin >> x;

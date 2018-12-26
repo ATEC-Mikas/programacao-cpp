@@ -69,6 +69,16 @@ int* Matrizes::diagonalPrincipal(int l,int c, int ** mat) {
 	}
 }
 
+int* Matrizes::diagonalPrincipalSC(int l,int c, int ** mat) {
+	if(l==c) {
+		int * vec=new int[l];
+		for(int i=0;i<l;i++) {
+			vec[i]=mat[i][i];
+		}
+		return vec;
+	}
+}
+
 int* Matrizes::centro(int l,int c,int ** mat) {
 	int * vet= new int[5];
 	if(l%2==0) {
@@ -164,4 +174,13 @@ int ** Matrizes::criarMatNula(int l,int c) {
 		}
 	}
 	return mat;
+}
+
+bool Matrizes::vecIsDiagonal(int L,int C,int ** mat, int * vec) {
+	for(int i=0;i<L;i++) {
+		if(mat[i][i]!=vec[i]) {
+			return false;
+		}
+	}
+	return true;
 }

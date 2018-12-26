@@ -23,4 +23,8 @@ class Matrizes {
 		static bool isIdentidade(int l,int c, int ** mat);
 		static bool isEscalar(int l,int c, int ** mat);
 		static int ** criarMatNula(int l,int c);
+		
+		// Plus work
+		static int * diagonalPrincipalSC(int l,int c, int ** mat);
+		static bool vecIsDiagonal(int L,int C,int ** mat, int * vec);
 };
