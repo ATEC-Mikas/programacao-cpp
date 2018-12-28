@@ -23,6 +23,8 @@ int main() {
 	cout << r3.toString() << "\n";
 	Recta r4(r3);
 	cout << r4.toString() << "\n";
+	Recta r5(1,2,10,20);
+	cout << "\nPonto medio: "<< r5.pontoMedio().toString();
 	
 	return 0;
 }

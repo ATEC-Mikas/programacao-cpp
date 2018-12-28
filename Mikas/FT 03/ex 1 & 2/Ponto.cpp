@@ -79,7 +79,7 @@ void Recta::setPonto(int n, int a, int b) {
 			p2.setY(b);			
 			break;
 		default:
-			throw invalid_argument( "n invalido" );
+			throw invalid_argument( "setPonto() com N invalido." );
 	}
 }
 
@@ -113,4 +113,9 @@ Ponto Recta::getPonto(int n) {
 
 string Recta::toString() {
 	return "Recta:\n\t1: " + p1.toString() + "\n\t2: " + p2.toString();
+}
+
+Ponto Recta::pontoMedio() {
+	Ponto pm((p1.getX()+p2.getX())/2,(p1.getY()+p2.getY())/2);
+	return pm;
 }

@@ -33,4 +33,5 @@ class Recta {
 		void setPonto(int n,Ponto &p);
 		Ponto getPonto(int n);
 		string toString();
+		Ponto pontoMedio();
 };
