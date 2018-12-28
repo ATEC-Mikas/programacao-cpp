@@ -1,6 +1,6 @@
 [Project]
-FileName=exer4.dev
-Name=exer4
+FileName=ex1.dev
+Name=ex1
 Type=1
 Ver=2
 ObjFiles=
@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=00000000c0000000000000000
-UnitCount=3
+UnitCount=4
 
 [VersionInfo]
 Major=1
@@ -51,7 +51,17 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=Conta.h
+FileName=Contacto.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit4]
+FileName=Contacto.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -61,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=Conta.cpp
+FileName=Data.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -71,7 +81,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=main.cpp
+FileName=Data.h
 CompileCpp=1
 Folder=
 Compile=1
