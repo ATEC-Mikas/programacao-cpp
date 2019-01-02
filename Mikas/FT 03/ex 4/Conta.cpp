@@ -74,7 +74,7 @@
 		}
 		
 		bool Conta::levantar(int n) {
-				if(n<=saldo && estado) {
+				if(n>0 n<=saldo && estado) {
 					saldo-=n;
 					return true;
 				}
@@ -82,7 +82,7 @@
 		}
 		
 		bool Conta::depositar(int n) {
-			if(estado) {
+			if(estado && n>0) {
 				saldo+=n;
 				return true;
 			}
