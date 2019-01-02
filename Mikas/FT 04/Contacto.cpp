@@ -82,6 +82,21 @@
 			return (dataNasc.setAno(a)==0 && dataNasc.setMes(m)==0 &&	dataNasc.setDia(d)==0);
 		}
 		
+		int Contacto::getId() {
+			return id;
+		}
+		int Contacto::getTelef() {
+			return telefone;
+		}
+		string Contacto::getNome() {
+			return nome;
+		}
+		string Contacto::getEmail() {
+			return email;
+		}
+		Data Contacto::getData() {
+			return dataNasc;
+		}
 		string Contacto::toString() {
 			string s;
 			s = "\nNome: " + nome 
