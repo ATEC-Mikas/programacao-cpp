@@ -11,7 +11,7 @@
 		if(m<=0 || m>12) {
 			throw invalid_argument( "Mes invalido" );
 		}
-		if(a<=0 || a>2019){
+		if(a<1900 || a>2019){
 			throw invalid_argument( "Ano invalido" );
 		}
 		if(d<=0 || d>31) {
@@ -58,7 +58,7 @@
 				mes=m;
 				dia=d;
 			} else {
-				if(a%4==1 && d<=28){
+				if(a%4!=0 && d<=28){
 					ano=a;
 					mes=m;
 					dia=d;
@@ -76,7 +76,7 @@
 	}
 	
 	int Data::setAno(int x) {
-		if(x<=0) {
+		if(x<1900) {
 			return 11; //Ano invalido
 		}
 		if(mes==2 && dia==29 && x%4!=0){

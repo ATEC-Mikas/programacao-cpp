@@ -1,5 +1,7 @@
 #pragma once
 #include "Data.h"
+#include <ctime>
+
 
 class Contacto {
 	private:
