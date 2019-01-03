@@ -31,7 +31,7 @@ class Veiculo {
 		bool registarSaida(double km);
 };
 
-class Carro : Veiculo {
+class Carro : public Veiculo {
 	private:
 		bool tejadilho;
 	public:
