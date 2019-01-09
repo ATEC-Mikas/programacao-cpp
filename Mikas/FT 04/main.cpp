@@ -9,7 +9,7 @@ int main() {
 	c1.setNome("Conta de teste");
 	c1.setId(2);
 	c1.setTelef(9111);
-	Data d1(22,1,2002);
+	Data d1(2,1,1998);
 	c1.setData(d1);
 	cout << "\n" << c1.toString();
 	

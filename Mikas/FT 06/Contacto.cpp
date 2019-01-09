@@ -12,10 +12,14 @@
 			email="";
 		}
 		Contacto::Contacto(int id,int telef,string nome,string email) {
-			this->id=id;
-			this->nome=nome;
-			this->email=email;
-			this->telef=telef;
+			if(!this->setId(id))
+				id=0;
+			if(!this->setTelef(telef))
+				telef=0;
+			if(!this->setNome(nome))
+				nome="Sem Nome";
+			if(!this->setEmail(email))
+				email="";
 		}
 		
 		Contacto::Contacto(Contacto &c) {
@@ -30,16 +34,14 @@
 				id=i;
 				return true;				
 			}
-			id=0;
 			return false;
 		}
 		
 		bool Contacto::setTelef(int t) {
-			if(t>=0) {			
+			if(t >= 100000000 && t<=999999999) {			
 				telef=t;
 				return true;
 			}
-			telef=0;
 			return false;
 		}
 		

@@ -25,7 +25,7 @@
 		}
 		
 		bool Pessoa::setData(int d,int m,int a) {
-			return (dataNasc.setAno(a)==0 && dataNasc.setMes(m)==0 &&	dataNasc.setDia(d)==0);
+			return (dataNasc.setAno(a)==0 && dataNasc.setMes(m)==0 && dataNasc.setDia(d)==0);
 		}
 		
 		bool Pessoa::setData(Data &d) {
@@ -39,9 +39,9 @@
 		string Pessoa::toString() {
 			return "\nID: " + to_string(this->getId())
 			     + "\n\tNome: " + this->getNome()
-			     + "\n\tEmail: " + this->getEmail()
-			     + "\n\tTelefone: " + to_string(this->getTelef())
-			     + "\n\tData de nascimento: " + dataNasc.toString();
+				 + "\n\tEmail: " + this->getEmail()
+				 + "\n\tTelefone: " + to_string(this->getTelef())
+				 + "\n\tData de nascimento: " + dataNasc.toString();
 		}
 		
 		int Pessoa::calcularIdade() {

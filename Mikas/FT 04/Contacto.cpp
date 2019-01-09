@@ -86,7 +86,7 @@
 			return id;
 		}
 		int Contacto::getTelef() {
-			return telefone;
+			return telef;
 		}
 		string Contacto::getNome() {
 			return nome;
